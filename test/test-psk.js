@@ -1,7 +1,7 @@
 'use strict'
 
 const ILP = require('ilp')
-const DummyLedgerPlugin = require('.')
+const DummyLedgerPlugin = require('../src')
 
 const sender = ILP.createSender({
   _plugin: DummyLedgerPlugin,
