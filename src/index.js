@@ -1,5 +1,8 @@
 'use strict'
 
+const lnd = require('lnrpc-client').LightningClient;
+lnd.getInfo();
+
 const EventEmitter2 = require('eventemitter2');
 
 class MissingFulfillmentError extends Error { constructor (message) { super(message); this.name = 'MissingFulfillmentError' } }
