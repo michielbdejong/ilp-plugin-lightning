@@ -7,4 +7,5 @@ EXPOSE 8280
 
 RUN git clone https://github.com/mably/lncli-web /app
 RUN cd /app && npm install
+RUN cd /app && "./node_modules/.bin/bower" install --allow-root
 CMD cd /app && node server -l alice:10009 -h 0.0.0.0
