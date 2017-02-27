@@ -1,0 +1,26 @@
+{
+  "name": "ilp-plugin-lightning",
+  "version": "1.0.0",
+  "description": "Work-in-Progress! :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michielbdejong/ilp-plugin-lightning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michielbdejong/ilp-plugin-lightning/issues"
+  },
+  "homepage": "https://github.com/michielbdejong/ilp-plugin-lightning#readme",
+  "dependencies": {
+    "eventemitter2": "^3.0.1",
+    "lnrpc-client": "^0.1.1-alpha-3"
+  },
+  "devDependencies": {
+    "ilp": "^8.2.2"
+  }
+}
