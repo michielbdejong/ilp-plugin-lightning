@@ -44,12 +44,33 @@ services:
         volumes:
             - shared:/rpc
         entrypoint: ["./start-lnd.sh"]
+        ports:
+          - "10009"
+          - "10011"
 
     alice:
       extends: lnd
       container_name: alice
       links:
           - "btcd:btcd"
+
+    aliceweb:
+      build:
+          context: lncliweb/
+      container_name: aliceweb
+      links:
+          - "alice:alice"
+      ports:
+        - "8281:8280"
+
+    bobweb:
+      build:
+          context: lncliweb/
+      container_name: bobweb
+      links:
+          - "alice:bob"
+      ports:
+        - "8282:8280"
 
     bob:
       extends: lnd
