@@ -1,7 +1,11 @@
 #!/bin/sh
-cd test/helpers/docker
 export BITCOIN_NETWORK="simnet"
-docker-compose up -d "btcd"
-docker-compose up -d "alice"
-cd ..
+echo Stopping:
+docker ps
+docker stop `docker ps -q`
+echo Removing:
+docker ps -a
+docker rm `docker ps -qa`
+echo Starting up:
+cd test/helpers/
 node ./startMining.js
