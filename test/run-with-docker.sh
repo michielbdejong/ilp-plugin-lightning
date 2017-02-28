@@ -9,3 +9,5 @@ docker rm `docker ps -qa`
 echo Starting up:
 cd test/helpers/
 node ./startMining.js
+cd ..
+node payment_test.js
