@@ -159,7 +159,7 @@ function createChannel(from, to) {
   return Promise.resolve().then(() => {
     console.log({ pubkeys }, `${from} will now open the channel`);
     return retryCmd('docker', ['exec', from, 'lncli', 'openchannel', `--node_key=${pubkeys[to]}`, '--num_confs=1', '--local_amt=1000000'], undefined, obj => {
-      return ((typeof obj === 'object') && (type obj.funding_txid === 'string));
+      return ((typeof obj === 'object') && (typeof obj.funding_txid === 'string'));
     });
   }).then(() => {
      return doCmd('docker-compose', ['run', 'btcctl', 'generate', '1'], { env: process.env, cwd: './docker' });
