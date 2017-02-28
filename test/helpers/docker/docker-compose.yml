@@ -44,15 +44,15 @@ services:
         volumes:
             - shared:/rpc
         entrypoint: ["./start-lnd.sh"]
-        ports:
-          - "10009"
-          - "10011"
 
     alice:
       extends: lnd
       container_name: alice
       links:
           - "btcd:btcd"
+      ports:
+        - "21009:10009"
+        - "21011:10011"
 
     aliceweb:
       build:
@@ -77,6 +77,9 @@ services:
       container_name: bob
       links:
           - "btcd:btcd"
+      ports:
+        - "22009:10009"
+        - "22011:10011"
 
 volumes:
   # shared volume is need to store the btcd rpc certificates and us it within
