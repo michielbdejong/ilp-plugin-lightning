@@ -1,7 +1,7 @@
 {
-  "name": "ilp-plugin-virtual",
+  "name": "ilp-plugin-lightning",
   "version": "12.2.1",
-  "description": "ILP virtual ledger plugin for directly transacting connectors",
+  "description": "ILP lightning ledger plugin for directly transacting connectors",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/interledger/ilp-plugin-virtual.git"
+    "url": "git+https://github.com/michielbdejong/ilp-plugin-lightning.git"
   },
   "keywords": [
-    "virtual",
+    "lightning",
     "trustline",
     "ripple",
     "ledgerless",
@@ -26,9 +26,9 @@
   "author": "Interledger Team <info@interledger.org>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/interledger/ilp-plugin-virtual/issues"
+    "url": "https://github.com/michielbdejong/ilp-plugin-lightning/issues"
   },
-  "homepage": "https://github.com/interledger/ilp-plugin-virtual#readme",
+  "homepage": "https://github.com/michielbdejong/ilp-plugin-lightning#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "co-mocha": "^1.1.3",
