@@ -47,6 +47,12 @@ function retryCmd(cmd, args, opts, test) {
   });
 }
 
+function waitForBalance(person, biggerThan = 0) {
+  return retryCmd('docker', ['exec', person, 'lncli', 'walletbalance', '--witness_only=true'], undefined, obj => {
+    return ((typeof obj === 'object') && (typeof obj.balance === 'number') && (obj.balance > biggerThan));
+  });
+}
+
 function findPubKeys(players) {
   if (players.length === 0) {
     return Promise.resolve();
@@ -185,6 +191,8 @@ return Promise.resolve().then(() => {
   return findPubKeys(['alice', 'bob']);
 }).then(() => {
   return createPeers('alice', 'bob');
+}).then(() => {
+  return waitForBalance('alice');
 }).then(() => {
   return createChannel('alice', 'bob');
 });
