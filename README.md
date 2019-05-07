@@ -1,5 +1,7 @@
 # ilp-plugin-virtual [![npm][npm-image]][npm-url] [![circle][circle-image]][circle-url] [![codecov][codecov-image]][codecov-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/michielbdejong/ilp-plugin-lightning.svg)](https://greenkeeper.io/)
+
 [npm-image]: https://img.shields.io/npm/v/ilp-plugin-virtual.svg?style=flat
 [npm-url]: https://npmjs.org/package/ilp-plugin-virtual
 [circle-image]: https://circleci.com/gh/interledgerjs/ilp-plugin-virtual.svg?style=shield
